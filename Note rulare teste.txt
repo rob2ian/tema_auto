@@ -1,0 +1,10 @@
+Testele au fost implementate in framework-ul Codeception PHP, cu Gherkin pentru descrierea scenariilor, plus Selenium server(care trebuie instalat si pornit pentru executia testelor).
+
+Un test .feature se ruleaza complet(toate scenariile) ca in exemplul urmator: 
+
+php vendor/bin/codecept run Acceptance order-placement.feature
+
+Pentru rulare scenariu separat: 
+php vendor/bin/codecept run Acceptance order-placement.feature:"Complete a full order flow"
+
+Unele dintre scenarii nu trec, in mod corect - este explicat in comentarii.

@@ -1,0 +1,78 @@
+Plan testare complet:
+(Nota: per tema sunt implementate scenariile de login, order flow si extra scenariile de validari pentru checkout pas 2)
+
+Login 
+- login standard user
+- logout standard user
+- verificare intoarcere pe pagina de login la delogare
+- login camp user gol
+- login camp parola gol
+- login camp user gresit
+- login camp user corect dar cu spatii
+- login camp parola gresita
+- login camp parola cu spatii
+- login camp user corect dar uppercase
+- login camp parola corect dar uppercase
+- verificare accesare pagina inventory din URL fara logare
+
+Inventory
+- verificare numar produse pe pagina
+- sortare produse in ordine alfabetica alfabetica(A-Z)
+- sortare produse in ordine alfabetica alfabetica(Z-A)
+- sortare produse dupa pret (crescator)
+- sortare produse dupa pret (descrescator)
+- adaugare/scoatere produse din cart
+
+Inventory-item(pagina produs)
+- verificare info produs
+- adaugare produs din pagina produs
+- stergere produs din cart din pagina produs
+- adaugare produse atat din inventory cat si inventory-item - verificare actualizare cart
+
+Cart
+- verificare corespundere produse/detalii deja adaugate 
+- verificare produse sterse din pagina cart la intoarcerea pe pagina de inventory
+- verificare existenta produse adaugate dupa delogare/relogare
+- verificare sarire pas 1 checkout prin accesare URL pas 2 checkout
+
+Checkout-step-one
+- 'Continue' cu toate campurile valid completate
+- 'Continue' cu camp First Name gol
+- 'Continue' cu camp Last Name gol
+- 'Continue' cu camp ZIP/Postal Code gol
+- 'Continue' cu camp First Name cu cifre/caractere speciale
+- 'Continue' cu camp Last Name cu cifre/caractere speciale
+- vericare intoarcere pe pagina Cart dar cu produsele ramase, la apasare buton Cancel
+- verificare sarire pas 1 checkout prin accesare URL pas 2 checkout
+
+Check-out-step-two
+- verificare detalii produse, payment/delivery si total, apasare Finish
+- vericare intoarcere pe pagina Inventory dar cu produsele ramase, la apasare buton Cancel
+
+Checkout-complete
+- verificare mesaj de succes comanda
+- verificare intoarcere pe pagina inventory la apasare buton Back Home, cu cart-ul fiind gol
+
+Flow plasare comanda
+- scenariu complet de succes plasare comanda
+	* Pagina Login - login standard user
+	* Pagina Inventory - sortare produse in dupa pret (crescator)
+	* Pagina Inventory - adaugare/scoatere produse din cart
+	* Pagina Cart - verificare corespundere produse/detalii adaugate
+	* Pagina Checkout pas 1 - Continue cu toate campurile valid completate
+	* Pagina Checkout pas 2 - verificare detalii produse, payment/delivery si total, apasare Finish
+	* Pagina Checkout-complete - verificare mesaj de succes comanda
+	* Pagina Checkout-complete - apasare Back Home
+	* Pagina Inventory - logout
+	* Pagina Login - verificare redirectionare
+- plasare comanda fara produse
+- plasare comanda fara date personale(sarire pas 2 checkout)
+
+Extra
+* parametrizare login cu diversi useri pentru teste diferentiale
+- verificare imposibilitate de conectare locked-out user
+- conectare cu problem_user/error_user si verificare scenarii pagini
+- conectare cu performance_glitch_user si verificare timpi logare si intoarcere pe pagina Inventory la apasare Back Home
+- conectare cu visual_user si verificare vizuala a elementor de pe pagina
+	
+	
